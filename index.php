@@ -1,18 +1,12 @@
 <?php
-namespace eBaseInterviewExercise;
-
-class Interview
-{
-    public static $title = 'Interview test';
-    
-    public static $people = array(
-        array('id'=>1, 'first_name'=>'John', 'last_name'=>'Smith', 'email'=>'john.smith@hotmail.com'),
-        array('id'=>2, 'first_name'=>'Paul', 'last_name'=>'Allen', 'email'=>'paul.allen@microsoft.com'),
-        array('id'=>3, 'first_name'=>'James', 'last_name'=>'Johnston', 'email'=>'james.johnston@gmail.com'),
-        array('id'=>4, 'first_name'=>'Steve', 'last_name'=>'Buscemi', 'email'=>'steve.buscemi@yahoo.com'),
-        array('id'=>5, 'first_name'=>'Doug', 'last_name'=>'Simons', 'email'=>'doug.simons@hotmail.com')
-    );
-}
+// TODO: Define Person as a class and load in a list of objects instead of this array
+$allPeople = array(
+    array('id'=>1, 'first_name'=>'John', 'last_name'=>'Smith', 'email'=>'john.smith@hotmail.com'),
+    array('id'=>2, 'first_name'=>'Paul', 'last_name'=>'Allen', 'email'=>'paul.allen@microsoft.com'),
+    array('id'=>3, 'first_name'=>'James', 'last_name'=>'Johnston', 'email'=>'james.johnston@gmail.com'),
+    array('id'=>4, 'first_name'=>'Steve', 'last_name'=>'Buscemi', 'email'=>'steve.buscemi@yahoo.com'),
+    array('id'=>5, 'first_name'=>'Doug', 'last_name'=>'Simons', 'email'=>'doug.simons@hotmail.com')
+);
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +18,11 @@ class Interview
 </head>
 <body>
 
-    <h1><?=Interview::$title;?></h1>
+    <h1>Interview Test</h1>
 
     <hr>
 
-    <table>
+    <table id="peopleTable">
         <thead>
             <tr>
                 <th>First Name</th>
@@ -37,8 +31,9 @@ class Interview
             </tr>
         </thead>
         <tbody>
-            <?php foreach (Interview::$people as $person) : ?>
+            <?php foreach ($allPeople as $index => $person) : ?>
                 <tr>
+                    <td class="select"><input type="button" id=<?=$person['id']?> name="<?=$person['id']?>" value="SAY HI!" onclick="alert('Hi!');" /> </td>
                     <td><?=$person['first_name'];?></td>
                     <td><?=$person['last_name'];?></td>
                     <td><?=$person['email'];?></td>
