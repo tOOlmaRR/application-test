@@ -20,9 +20,7 @@ class Interview
 <head>
     <meta charset="UTF-8">
     <title>Interview test</title>
-    <style>
-        body {font: normal 14px/1.5 sans-serif;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
 </head>
 <body>
 
