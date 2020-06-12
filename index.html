@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="peopleListApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+</head>
+<body>
+    <h1>Interview Test</h1>
+    <hr>
+    <table id="peopleTable" ng-controller="peopleListController as peopleList">
+        <thead>
+            <tr>
+                <th></th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in people">
+                <td class="select">
+                    <button type="button" ng-click="alertEmail(person.email)">Show Email</button>
+                <td>{{person.firstName}}</td>
+                <td>{{person.lastName}}</td>
+                <td>{{person.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
