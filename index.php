@@ -33,7 +33,7 @@ $allPeople = array(
             <?php foreach ($allPeople as $index => $person) : ?>
                 <tr>
                     <td class="select">
-                        <button type="button" id="person<?=$person['id'];?>" name="<?=$person['id'];?>" onclick="sayHi('<?=$person['first_name'];?>','<?=$person['last_name'];?>','<?=$person['email'];?>');">Greet</button>
+                        <button type="button" id="person<?=$person['id'];?>" name="<?=$person['id'];?>" onclick="displayEmail('<?=$person['email'];?>');">Show Email</button>
                     <td>
                         <?=$person['first_name'];?>
                     </td>

@@ -1,4 +1,4 @@
-function sayHi(firstName, lastName, email) {
-    message = `Hi ${firstName} ${lastName} (${email})`;
+function displayEmail(email) {
+    message = `${email}`;
     alert(message);
 }
