@@ -14,17 +14,16 @@ $allPeople = array(
 <head>
     <meta charset="UTF-8">
     <title>Interview test</title>
+    <script src="scripts/main.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
 </head>
 <body>
-
     <h1>Interview Test</h1>
-
     <hr>
-
     <table id="peopleTable">
         <thead>
             <tr>
+                <th></th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -33,10 +32,17 @@ $allPeople = array(
         <tbody>
             <?php foreach ($allPeople as $index => $person) : ?>
                 <tr>
-                    <td class="select"><input type="button" id=<?=$person['id']?> name="<?=$person['id']?>" value="SAY HI!" onclick="alert('Hi!');" /> </td>
-                    <td><?=$person['first_name'];?></td>
-                    <td><?=$person['last_name'];?></td>
-                    <td><?=$person['email'];?></td>
+                    <td class="select">
+                        <button type="button" id="person<?=$person['id'];?>" name="<?=$person['id'];?>" onclick="sayHi('<?=$person['first_name'];?>','<?=$person['last_name'];?>','<?=$person['email'];?>');">Greet</button>
+                    <td>
+                        <?=$person['first_name'];?>
+                    </td>
+                    <td>
+                        <?=$person['last_name'];?>
+                    </td>
+                    <td>
+                        <?=$person['email'];?>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
