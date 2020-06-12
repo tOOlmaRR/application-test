@@ -1,7 +1,6 @@
-angular.module('PeopleListApp', [])
-  .controller('PeopleListController', function() {
-    var listOfPeople = this;
-    listOfPeople.people = [
+let peopleListApp = angular.module('peopleListApp', []);
+peopleListApp.controller('peopleListController', function($scope) {
+    $scope.people = [
       {id:1, firstName:'John', lastName:'Smith', email:'john.smith@hotmail.com'},
       {id:2, firstName:'Paul', lastName:'Allen', email:'paul.allen@microsoft.com'},
       {id:3, firstName:'James', lastName:'Johnston', email:'james.johnston@gmail.com'},
@@ -9,7 +8,7 @@ angular.module('PeopleListApp', [])
       {id:5, firstName:'Doug', lastName:'Simons', email:'doug.simons@hotmail.com'},
     ];
 
-    listOfPeople.alertEmail = function(email) {
+    $scope.alertEmail = function(email) {
       alert(email);
     };
   });

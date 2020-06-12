@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="PeopleListApp">
+<html lang="en" ng-app="peopleListApp">
 <head>
     <meta charset="UTF-8">
     <title>Interview test</title>
@@ -10,7 +10,7 @@
 <body>
     <h1>Interview Test</h1>
     <hr>
-    <table id="peopleTable" ng-controller="PeopleListController as peopleList">
+    <table id="peopleTable" ng-controller="peopleListController as peopleList">
         <thead>
             <tr>
                 <th></th>
@@ -20,9 +20,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="person in peopleList.people">
+            <tr ng-repeat="person in people">
                 <td class="select">
-                    <button type="button" ng-click="peopleList.alertEmail(person.email)">Show Email</button>
+                    <button type="button" ng-click="alertEmail(person.email)">Show Email</button>
                 <td>{{person.firstName}}</td>
                 <td>{{person.lastName}}</td>
                 <td>{{person.email}}</td>
